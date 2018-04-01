@@ -6,16 +6,19 @@ import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './nav/nav.component';
+
+import { UIModule } from "./ui/ui.module";
+
+import './shared/rxjs-extensions';
 
 @NgModule({
   imports: [ BrowserModule,
                    FormsModule,
-                   AppRoutingModule
+                   AppRoutingModule,
+                   UIModule
                    ],
   declarations: [ AppComponent,
-                          HomeComponent,
-                          NavbarComponent
+                          HomeComponent
                           ],
   providers: [ ],
   bootstrap:    [ AppComponent ]
